@@ -4,14 +4,39 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Todo App</title>
+  <title>Express Demo</title>
   <link href = 'stylesheet'>
   <!-- Latest compiled and minified Bootstrap CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 
   </head>
+
 <body class="container text-center">
+  <div class="jumbotron">
+    <div class="container">
+      <div>
+        <form method="" role="form">
+          <legend>Add New Gif</legend>
+
+          <div className="form-group">
+            <input type="text" class="form-control" id="keyword" placeholder="keyword"/>
+          </div>
+
+          <div className="form-group">
+            <input type="text" class="form-control" id="url" placeholder="url"/>
+          </div>
+
+          <div className="form-group">
+            <input type="text" class="form-control" id="description" placeholder="description"/>
+          </div>
+
+          <button onClick="postGifs()" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <div>
     <% for(var i = 0; i < gifs.length; i++){ %>
 
@@ -19,7 +44,6 @@
      <h3> <%= gifs[i].description %> </h3>
 
     <% } %>
-
   </div>
   <style media="screen">
     img {
@@ -36,8 +60,7 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-<script src="https://fb.me/react-0.13.3.js"></script>
-<script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+<script src="app.js"></script>
 
 
 </html>

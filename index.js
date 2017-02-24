@@ -58,6 +58,7 @@ app.get('/v1/gifs/search', function(req, res){
 
 
 app.post('/v1/gifs', function(req, res){
+  console.log(req.body);
   var aGif = new Gif();
   aGif.keyword = req.body.gif.keyword;
   aGif.url = req.body.gif.url;
